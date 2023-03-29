@@ -1,0 +1,14 @@
+<div *ngIf="album" class="dashboard">
+    <h2>{{album.name}}</h2>
+    <p>Date created: {{formatDate(album.dateCreated)}}</p>
+    <ul class="images">
+        <li *ngFor="let image of album.images" class="images-list">
+            <img [src]="image.url"/>
+            <span class="remove" (click)="removeFromAlbum(image.id)">Remove</span>
+        </li>
+    </ul>
+    <div class="action-buttons">
+        <button class="back-button" (click)="goToDashboard()">Go back</button>
+        <button class="save-button">Save</button>
+    </div>
+</div>

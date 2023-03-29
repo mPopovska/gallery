@@ -1,0 +1,114 @@
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: 300px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border: black 3px solid;
+    justify-content: center;
+}
+
+.album-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+
+    button {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: bold;
+        background-color: transparent;
+        border: none;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .cancel-button,
+    .save-button {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: bold;
+        border: 2px solid black;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: 0 8px;
+        width: 120px;
+        padding: 4px;
+    }
+    .cancel-button {
+        background-color: transparent;
+        color: #000;
+        &:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+    .save-button {
+        background-color: #000;
+        color: #fff;
+    }
+}
+
+.albums-list {
+    padding: 0 15px;
+    margin: 0 0 30px 0;
+}
+
+.album-item {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    list-style: none;
+    background-color: inherit;
+    text-align: center;
+    color: #828282;
+    cursor: pointer;
+    &--selected {
+        color: #000;
+    }
+}
+
+.album-title {
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    height: 40px;
+    margin-bottom: 50px;
+    &::placeholder {
+        font-family: 'Lexend';
+        color: #000;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 0.64px;
+    }
+}
+
+.selected-option {
+    color: #828282;
+}
+
+.error-message {
+    color: #a70000;
+    margin-bottom: 16px;
+}

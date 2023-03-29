@@ -1,0 +1,83 @@
+.dashboard {
+    justify-content: center;
+    max-width: 1356px;
+    margin: 0 auto;
+    h2, p {
+        text-align: center;
+    }
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    padding: 0;
+    margin: 0 auto;
+
+    .images-list {
+        list-style: none;
+        margin: 5px;
+        &:hover {
+            .remove {
+                display: block;
+            }
+        }
+    }
+
+    li {
+        position: relative;
+    }
+    li span {
+        display: none;
+        position: absolute;
+        width: calc(100% - 20px);
+        padding: 10px;
+    }
+
+    .remove {
+        // width: 380px;
+        background-color: #000;
+        color: #fff;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        margin-top: -37px;
+        cursor: pointer;
+    }
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    .back-button,
+    .save-button {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: bold;
+        border: 2px solid black;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: 0 8px;
+        padding: 4px;
+    }
+    .back-button {
+        background-color: transparent;
+        color: #000;
+        &:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+    .save-button {
+        background-color: #000;
+        color: #fff;
+    }
+}

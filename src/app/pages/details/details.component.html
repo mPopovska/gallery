@@ -1,0 +1,22 @@
+<div *ngIf="image" class="details-page">
+    <div class="action-buttons">
+        <button class="add-button" (click)="openModal()">ADD TO ALBUM +</button>
+        <div class="download-section">
+            <button class="download-button" (click)="toggleDownload()">DOWNLOAD</button>
+            <ul *ngIf="isOpened" class="option-list">
+                <li class="option-item" *ngFor="let option of downloadOptions" key="option.label" (click)="downloadImage(option.url)">
+                    <span class="option-label">{{option.label}}</span>
+                    <span class="option-sizes">{{option.sizes}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <img [src]="image.details_url"/>
+    <div class="image-details">
+        <span class="upload-label">UPLOADED BY</span>
+        <h2>{{image.author}}</h2>
+    </div>
+    <button class="back-button" (click)="goToDashboard()">GO BACK</button>
+</div>
+
+<app-modal #albumModal></app-modal>

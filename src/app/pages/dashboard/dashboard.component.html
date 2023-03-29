@@ -1,0 +1,11 @@
+<div class="content">
+    <div class="section" *ngFor="let page of pages">
+        <div class="image" *ngFor="let image of page.images; let i = index">
+            <img [src]="image.url" (click)="goToImageDetails(image.id)"/>
+            <span class="add" (click)="openModal(image.id)">ADD TO ALBUM</span>
+        </div>
+    </div>
+</div>
+
+<app-modal #albumModal></app-modal>
+<app-notification></app-notification>

@@ -1,0 +1,19 @@
+<dialog #modal>
+    <div class="modal">
+        <div class="album-buttons">
+            <button [ngClass]="isNewAlbum ? 'selected-option' : ''" (click)="togglePreview(true)">Create New Album</button>
+            <button [ngClass]="!isNewAlbum ? 'selected-option' : ''" (click)="togglePreview(false)">Add To Existing</button>
+        </div>
+        <input *ngIf="isNewAlbum" [value]="albumName" type="text" placeholder="Enter title here" class="album-title" (change)="albumNameChanged($event)"/>
+        <ul *ngIf="!isNewAlbum" class="albums-list">
+            <li *ngFor="let album of albums" class="album-item" [ngClass]="album.id === albumId ? 'album-item--selected' : ''" (click)="selectAlbum(album.id)">
+                {{album.name}}
+            </li>
+        </ul>
+        <div *ngIf="showError" class="error-message">{{errorMessage}}</div>
+        <div class="action-buttons">
+            <button class="cancel-button" (click)="close()">Cancel</button>
+            <button class="save-button" (click)="addToAlbum()">Save</button>
+        </div>
+    </div>
+</dialog>

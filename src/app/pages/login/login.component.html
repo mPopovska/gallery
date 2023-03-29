@@ -1,0 +1,14 @@
+<div>
+    <section class="title-section">
+        <h1>Join our stock community</h1>
+        <p>Download free photos and videos powered by the best photographers.</p>
+    </section>
+    <section class="login-section">
+        <label>Username</label>
+        <input type="text" placeholder="Enter username here..." name="username" (change)="usernameChanged($event)" [value]="username"/>
+        <label>Password</label>
+        <input type="password" placeholder="Enter password here..." name="password" (change)="passwordChanged($event)" [value]="password"/>
+        <button class="login-btn" (click)="login()">Log in</button>
+    </section>
+    <app-footer></app-footer>
+</div>

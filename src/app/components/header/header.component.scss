@@ -1,0 +1,63 @@
+header {
+    background-color: #000;
+    height: 50px;
+    margin-bottom: 32px;
+}
+
+.nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    max-width: 1356px;
+}
+
+.logo {
+    padding-top: 10px;
+    margin: 0 auto;
+    margin-left: 44%;
+    cursor: pointer;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: relative;
+    margin-right: 10px;
+}
+
+button {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.albums-list {
+    position: absolute;
+    top: 40px;
+    left: 8px;
+    list-style: none;
+    border: 2px solid #000;
+    background-color: #fff;
+    color: #000;
+    padding: 0;
+    z-index: 1;
+}
+
+.album-item {
+    padding: 8px;
+}
