@@ -1,0 +1,6 @@
+<div *ngIf="user" class="user-info">
+    <h1>{{user.firstName}} {{user.lastName}}</h1>
+    <img [src]="user.image"/>
+    <p>GENDER: {{user.gender}}</p>
+    <p>EMAIL: {{user.email}}</p>
+</div>

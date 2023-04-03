@@ -40,6 +40,10 @@ export class HeaderComponent {
     this.router.navigate(['/dashboard'])
   }
 
+  public navigateToUserInfo() {
+    this.router.navigate(['/user-info']);
+  }
+
   public navigateToAlbum(albumId: string) {
     this.toggleDropdown();
     this.router.navigate(['/album', albumId]);

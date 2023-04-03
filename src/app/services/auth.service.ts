@@ -20,6 +20,7 @@ export class AuthService {
 
   public logout() {
     localStorage.removeItem('authToken');
+    localStorage.removeItem('userInfo');
   }
 
   public isAuthenticated() {

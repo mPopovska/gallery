@@ -18,6 +18,7 @@ export class LoginEffects {
           map(user => {
             if  (user.token) {
               localStorage.setItem('authToken', user.token);
+              localStorage.setItem('userInfo', JSON.stringify(user));
               return loginActions.loginSuccess();
             }
             return loginActions.loginFailure({ error: user })

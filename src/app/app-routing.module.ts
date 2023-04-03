@@ -25,7 +25,8 @@ const routes: Routes = [
     path: 'image/:id',
     component: DetailsComponent,
     canActivate: [AuthGuard]
-  }
+  },
+  { path: 'user-info', loadChildren: () => import('./modules/user/user.module').then(m => m.UserModule) }
 ];
 
 @NgModule({

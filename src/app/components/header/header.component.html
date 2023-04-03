@@ -8,6 +8,7 @@
       <ul *ngIf="isOpened && albums.length > 0" class="albums-list">
         <li class="album-item" *ngFor="let album of albums" key="album.id" (click)="navigateToAlbum(album.id)">{{album.name}}</li>
       </ul>
+      <button class="user-button" (click)="navigateToUserInfo()">User info</button>
       <button class="logout-button" (click)="logout()">Logout</button>
     </div>
   </div>
