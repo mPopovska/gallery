@@ -39,7 +39,7 @@ export class LoginComponent {
     if (this.loginForm.valid) {
       this.store$.dispatch(loginActions.login({username: this.loginForm.value.username!, password: this.loginForm.value.password!}));
     } else {
-      this.loginForm.markAsTouched();
+      this.loginForm.markAllAsTouched();
     }
   }
 }
