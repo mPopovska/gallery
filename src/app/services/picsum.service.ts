@@ -85,7 +85,6 @@ export class PicsumService {
 
   getDownalodOptions(image: Image): DownloadOption[] {
     const options: DownloadOption[] = [];
-    debugger;
     sizeLabels.forEach((sizeLabel: ImageSizeLabel) => {
       options.push(this.getDownloadImageSizes(image, sizeLabel));
     })

@@ -1,7 +1,11 @@
 header {
     background-color: #000;
     height: 50px;
-    margin-bottom: 32px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
 }
 
 .nav {
@@ -9,12 +13,13 @@ header {
     display: flex;
     justify-content: center;
     max-width: 1356px;
+    position: relative;
 }
 
 .logo {
     padding-top: 10px;
-    margin: 0 auto;
-    margin-left: 44%;
+    position: absolute;
+    float: none;
     cursor: pointer;
 }
 
@@ -22,28 +27,20 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    position: relative;
-    margin-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+    right: 14px;
 }
 
 button {
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: bold;
     background-color: transparent;
     border: 2px solid #fff;
     color: #fff;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-left: 8px;
-    margin-right: 8px;
-    padding: 4px;
-    cursor: pointer;
+    &:hover {
+        background-color: #fff;
+        color: #000;
+    }
 }
 
 .albums-list {

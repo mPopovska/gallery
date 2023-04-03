@@ -3,7 +3,7 @@
     <div class="logo">
       <img src="../../../assets/images/Site_Logo.svg" (click)="navigateHome()"/>
     </div>
-    <div class="action-buttons">
+    <div *ngIf="showButtons" class="action-buttons">
       <button class="albums-button" (click)="toggleDropdown()">My albums</button>
       <ul *ngIf="isOpened && albums.length > 0" class="albums-list">
         <li class="album-item" *ngFor="let album of albums" key="album.id" (click)="navigateToAlbum(album.id)">{{album.name}}</li>

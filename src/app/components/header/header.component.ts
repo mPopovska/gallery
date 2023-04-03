@@ -17,6 +17,7 @@ export class HeaderComponent {
   albums: AlbumModel[] = [];
   isOpened: boolean = false;
   isLoggedIn: Observable<boolean>;
+  showButtons: boolean = false;
 
   constructor(private store$: Store<AppState>, private router: Router) {
     this.store$.pipe(select(albumSelectors.getAlbums)).subscribe((albums => {
@@ -24,6 +25,7 @@ export class HeaderComponent {
     }));
     this.isLoggedIn = this.store$.pipe(select(loginSelectors.isAuthenticated));
     this.isLoggedIn.subscribe((next) => {
+      this.showButtons = next;
       if (!next) {
         this.router.navigate(['/login']);
       }

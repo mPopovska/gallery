@@ -1,4 +1,4 @@
-<div class="content">
+<div class="dashboard-content">
     <div class="section" *ngFor="let page of pages">
         <div class="image" *ngFor="let image of page.images; let i = index">
             <img [src]="image.url" (click)="goToImageDetails(image.id)"/>

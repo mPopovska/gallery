@@ -35,7 +35,6 @@
     }
 
     .remove {
-        // width: 380px;
         background-color: #000;
         color: #fff;
         font-size: 10px;
@@ -53,21 +52,6 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-    .back-button,
-    .save-button {
-        font-size: 14px;
-        line-height: 18px;
-        font-weight: bold;
-        border: 2px solid black;
-        text-transform: uppercase;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        margin: 0 8px;
-        padding: 4px;
-    }
     .back-button {
         background-color: transparent;
         color: #000;
@@ -79,5 +63,9 @@
     .save-button {
         background-color: #000;
         color: #fff;
+        &:hover {
+            background-color: #fff;
+            color: #000;
+        }
     }
 }

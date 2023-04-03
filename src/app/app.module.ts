@@ -21,6 +21,7 @@ import { AlbumEffects } from './store/effects/album.effects';
 import { ImageEffects } from './store/effects/image.effects';
 import { NotificationComponent } from './components/notification/notification.component';
 import { GeneralEffects } from './store/effects/general.effects';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
@@ -39,11 +40,12 @@ import { GeneralEffects } from './store/effects/general.effects';
     BrowserModule,
     AppRoutingModule,
     EffectsModule.forRoot([AppEffects, LoginEffects, AlbumEffects, ImageEffects, GeneralEffects]),
+    FormsModule,
+    ReactiveFormsModule,
     StoreModule.forRoot(reducers, {
       metaReducers
     }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
-    // isDevMode() ? StoreDevtoolsModule.instrument() : []
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

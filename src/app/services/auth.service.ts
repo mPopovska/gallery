@@ -15,7 +15,7 @@ export class AuthService {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({username, password})
-    }));
+    }).then(res => res.json()));
   }
 
   public logout() {

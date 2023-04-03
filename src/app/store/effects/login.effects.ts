@@ -16,8 +16,11 @@ export class LoginEffects {
       mergeMap((action) =>
         this.authService.login(action.username, action.password).pipe(
           map(user => {
-            localStorage.setItem('authToken', user.token);
-            return loginActions.loginSuccess();
+            if  (user.token) {
+              localStorage.setItem('authToken', user.token);
+              return loginActions.loginSuccess();
+            }
+            return loginActions.loginFailure({ error: user })
           }),
           catchError(error =>
             of(loginActions.loginFailure({ error }))
